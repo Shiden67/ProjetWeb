@@ -1,0 +1,8 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\HAAG\Desktop\formulaire\conf\.DS_Store,C:\Users\HAAG\Desktop\formulaire\target\scala-2.13\classes\.DS_Store)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\HAAG\Desktop\formulaire\conf\application.conf,C:\Users\HAAG\Desktop\formulaire\target\scala-2.13\classes\application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\HAAG\Desktop\formulaire\conf\ebean.properties,C:\Users\HAAG\Desktop\formulaire\target\scala-2.13\classes\ebean.properties)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\HAAG\Desktop\formulaire\conf\logback.xml,C:\Users\HAAG\Desktop\formulaire\target\scala-2.13\classes\logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\HAAG\Desktop\formulaire\conf\routes,C:\Users\HAAG\Desktop\formulaire\target\scala-2.13\classes\routes)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\HAAG\Desktop\formulaire\conf\evolutions\.DS_Store,C:\Users\HAAG\Desktop\formulaire\target\scala-2.13\classes\evolutions\.DS_Store)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\HAAG\Desktop\formulaire\conf\evolutions\default\1.sql,C:\Users\HAAG\Desktop\formulaire\target\scala-2.13\classes\evolutions\default\1.sql)[0m
