@@ -1,0 +1,11 @@
+@(liste: List[Person])
+@main("Liste des personnes"){
+<h1>Liste des @liste.size() personnes </h1> 
+<a href = "@routes.HomeController.sayhelloform"> Add Person</a>
+
+<ul>
+  @for(p <- liste) {
+   <li> <a href="@routes.HomeController.show(p.getId())">@p.getFirstname</a></li> 
+   }
+</ul> 
+}
