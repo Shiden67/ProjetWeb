@@ -1,0 +1,10 @@
+@(produit : Produit)
+
+@main(" Produit ok" ){
+
+<h1> @produit.getfamilleProduit @produit.getdatePeremption</h1>
+
+
+<a href="@routes.HomeController.supprimerProduit(produit.getid)"> Effacer ce produit</a>
+<a href = "@routes.HomeController.majProduit(produit.getid)" > Mettre le produit à jour</a>
+}

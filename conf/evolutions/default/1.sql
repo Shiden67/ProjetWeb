@@ -3,15 +3,18 @@
 
 # --- !Ups
 
-create table person (
+create table produit (
   id                            bigint auto_increment not null,
-  firstname                     varchar(255),
-  age                           integer not null,
-  constraint pk_person primary key (id)
+  nom_produit                   varchar(255),
+  famille_produit               varchar(255),
+  type_produit                  varchar(255),
+  nmb_produit                   integer not null,
+  date_peremption               timestamp,
+  constraint pk_produit primary key (id)
 );
 
 
 # --- !Downs
 
-drop table if exists person;
+drop table if exists produit;
 

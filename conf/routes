@@ -3,16 +3,14 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                                   controllers.HomeController.index(fname : String ?="")
-
-GET     /all                                controllers.HomeController.all()
-GET     /sayhello                           controllers.HomeController.sayhello()
-GET     /helloworld                         controllers.HomeController.helloworld(fname:String ?="")
-
-GET     /sayhelloform                       controllers.HomeController.sayhelloform(request : Request)
-POST    /helloworldform                     controllers.HomeController.helloworldform(request : Request)
+GET     /                           controllers.HomeController.acceuil
+GET     /ajoutProduit               controllers.HomeController.ajoutProduit(request : Request)
+POST    /produitOk                  controllers.HomeController.produitOk(request : Request)
+GET     /listeProduit               controllers.HomeController.listeProduit
+GET     /rechercheProduit/:id       controllers.HomeController.rechercheProduit( id : Long)
+GET     /supprimerProduit/:id       controllers.HomeController.supprimerProduit( id : Long)
+GET     /majProduit/:id             controllers.HomeController.majProduit(id : Long , request : Request)
+POST     /majProduitOk/:id          controllers.HomeController.majProduitOk(id : Long , request : Request)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
-
-GET /show/:id controllers.HomeController.show(id:Long)

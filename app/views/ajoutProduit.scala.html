@@ -1,0 +1,24 @@
+@(lform : Form[Produit])(implicit request : play.mvc.Http.Request, messages : play.i18n.Messages)
+
+@main("Ajout des Produits"){
+
+@helper.form(action = routes.HomeController.produitOk()){
+
+@helper.CSRF.formField
+@helper.inputText(lform("nomProduit") , '_showConstraints -> false)
+@helper.select( field = lform("familleProduit") , options = Seq ("Viande" -> "Viande" , "Legume" -> "Légume"), '_showConstraints -> false)
+@helper.inputText(lform("typeProduit"), '_showConstraints -> false)
+@helper.inputDate(lform("datePeremption"), '_showConstraints -> false)
+@helper.input(lform("nmbProduit"), '_showConstraints -> false) { (id , name , value , args) =>
+<input type = "number" name = "@name" id = "@id" @toHtmlArgs(args)>
+
+
+
+
+}
+
+<input type = "submit"  value = "Enregistrer"/>
+
+
+}
+}
