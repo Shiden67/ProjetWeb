@@ -1,0 +1,20 @@
+@(lform : Form[User])(implicit request : play.mvc.Http.Request, messages : play.i18n.Messages)
+
+@main("Ajout des User"){
+
+@helper.form(action = routes.HomeControllerUser.userOk()){
+
+@helper.CSRF.formField
+@helper.inputText(lform("prenom") , '_showConstraints -> false)
+@helper.inputText(lform("nom") , '_showConstraints -> false)
+@helper.inputDate(lform("age"), '_showConstraints -> false)
+@helper.inputText(lform("email") , '_showConstraints -> false)
+@helper.inputText(lform("mdp") , '_showConstraints -> false)
+<input type = "submit"  value = "Enregistrer"/>
+}
+
+
+
+
+
+}

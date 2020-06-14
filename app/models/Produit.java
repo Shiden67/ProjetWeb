@@ -33,6 +33,19 @@ private Date datePeremption;
     this.nmbProduit = 1;
     this.datePeremption = null;
 }
+    
+    
+   @ManyToOne
+   public User user;
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public long getid(){
         
         return this.id;

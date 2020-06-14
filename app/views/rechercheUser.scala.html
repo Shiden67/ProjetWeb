@@ -1,0 +1,10 @@
+@(user : User)
+
+@main(" User ok" ){
+
+<h1>  @user.getprenom</h1>
+
+
+<a href="@routes.HomeControllerUser.supprimerUser(user.getidUser)"> Effacer ce produit</a>
+<a href = "@routes.HomeControllerUser.majUser(user.getidUser)" > Mettre le produit à jour</a>
+}

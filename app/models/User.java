@@ -1,15 +1,29 @@
 package models;
 import java.util.Date;
 
-public class User{
+import play.data.validation.Constraints.*;
+
+import io.ebean.*;
+
+import javax.persistence.*;
+import java.util.List;
+
+
+@Entity
+public class User extends Model{
     
     private static final long serialVersionUID = 1L; 
-    
-    private long id;
+    @Id
+    private long idUser;
+   @Required
     private String prenom;
+    @Required
     private String nom;
+    @Required
     private Date age;
+    @Required
     private String email;
+    @Required
     private String mdp;
     
     
@@ -22,17 +36,27 @@ public class User{
         
          }
     
+    @OneToMany
+    public List<Produit> produit;
     
-    
-     public long getid(){
+    public boolean add(Produit p){
         
-        return this.id;
+        p.user = this;
+        return produit.add(p);
+        
         
     }
     
-    public void setid( long id){
+    
+     public long getidUser(){
         
-        this.id = id;
+        return this.idUser;
+        
+    }
+    
+    public void setidUser( long id){
+        
+        this.idUser = id;
         
     }
     
@@ -58,7 +82,7 @@ public class User{
     public void setnom(String nom){
         
         
-        this.prenom = nom;
+        this.nom = nom;
         
     }
     
@@ -105,7 +129,7 @@ public class User{
     }
     
     
-    // public static Finder<Long , User> find = new Finder<Long,User>(User.class);
+    public static Finder<Long , User> find = new Finder<Long,User>(User.class);
     
     
     
