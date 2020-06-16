@@ -99,7 +99,7 @@ public class HomeControllerUser extends Controller {
         Form<User> lform = userForm.bindFromRequest(request);
         if (lform.hasErrors()){
             
-            return badRequest(views.html.ajoutUser.render(lform , request,messagesApi.preferred(request)));
+            return badRequest(views.html.majUser.render(lform , id, request,messagesApi.preferred(request)));
             
         }
         
@@ -109,7 +109,7 @@ public class HomeControllerUser extends Controller {
         user.setidUser(id);
         user.update();
             user.save();
-        return redirect(routes.HomeControllerUser.listeUser());
+        return redirect(routes.HomeControllerUser.rechercheUser(id));
         }
     } 
     

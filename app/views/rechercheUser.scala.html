@@ -4,6 +4,22 @@
 
 <h1>  @user.getprenom</h1>
 
+<h2> nombre de produit : @user.produit.size()</h2>
+<a href ="@routes.HomeController.ajoutProduit(user.getidUser)" > ajouter </a>
+@for(p <- user.produit){
+          <li>
+
+<a href ="@routes.HomeController.rechercheProduit(p.getid())">@p.getnomProduit() </a>
+
+
+
+</li>
+          
+          
+          
+          
+          
+          }
 
 <a href="@routes.HomeControllerUser.supprimerUser(user.getidUser)"> Effacer ce produit</a>
 <a href = "@routes.HomeControllerUser.majUser(user.getidUser)" > Mettre le produit à jour</a>

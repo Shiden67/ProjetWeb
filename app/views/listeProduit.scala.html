@@ -1,10 +1,9 @@
 @(liste : List[Produit])
 
 @main("liste des Produits"){
-<a href="@routes.HomeController.ajoutProduit"> ajouter un Produit</a>
 <ol> 
     @for(p<-liste){
-                    <li> <a href = "@routes.HomeController.rechercheProduit(p.getid())">@p.getnomProduit() </a>
+                    <li> <a href = "@routes.HomeController.rechercheProduit(p.getid())">@p.getnomProduit() @p.getUser().getidUser()</a>
     </li>
                     }
 </ol>

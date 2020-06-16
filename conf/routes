@@ -4,8 +4,8 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.acceuil
-GET     /ajoutProduit               controllers.HomeController.ajoutProduit(request : Request)
-POST    /produitOk                  controllers.HomeController.produitOk(request : Request)
+GET     /ajoutProduit/:idUser       controllers.HomeController.ajoutProduit(request : Request , idUser : Long)
+POST    /produitOk                  controllers.HomeController.produitOk(request : Request, idUser : Long)
 GET     /listeProduit               controllers.HomeController.listeProduit
 GET     /rechercheProduit/:id       controllers.HomeController.rechercheProduit( id : Long)
 GET     /supprimerProduit/:id       controllers.HomeController.supprimerProduit( id : Long)
@@ -19,10 +19,10 @@ POST     /majProduitOk/:id          controllers.HomeController.majProduitOk(id :
 GET     /ajoutUser                  controllers.HomeControllerUser.ajoutUser(request : Request)
 POST    /userOk                     controllers.HomeControllerUser.userOk(request : Request)
 GET     /listeUser                  controllers.HomeControllerUser.listeUser
-GET     /rechercheUser/:id          controllers.HomeControllerUser.rechercheUser( id : Long)
-GET     /supprimerUser/:id          controllers.HomeControllerUser.supprimerUser( id : Long)
-GET     /majUser/:id                controllers.HomeControllerUser.majUser(id : Long , request : Request)
-POST     /majUserOk/:id             controllers.HomeControllerUser.majUserOk(id : Long , request : Request)
+GET     /rechercheUser/:idUser      controllers.HomeControllerUser.rechercheUser( idUser : Long)
+GET     /supprimerUser/:idUser          controllers.HomeControllerUser.supprimerUser( idUser : Long)
+GET     /majUser/:idUser                controllers.HomeControllerUser.majUser(idUser : Long , request : Request)
+POST     /majUserOk/:idUser             controllers.HomeControllerUser.majUserOk(idUser : Long , request : Request)
 
 
 

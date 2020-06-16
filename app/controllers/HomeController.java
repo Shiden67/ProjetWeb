@@ -6,6 +6,7 @@ import models.*;
 import javax.inject.Inject; 
 import play.i18n.MessagesApi;
 import play.data.*;
+import models.User;
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -38,28 +39,32 @@ public class HomeController extends Controller {
         return ok(views.html.acceuil.render());
     }
     
-    public Result ajoutProduit(Http.Request request){
-        
-        return ok(views.html.ajoutProduit.render(produitForm,request,messagesApi.preferred(request)));
+    public Result ajoutProduit( Http.Request request , Long idUser){
+        User user = User.find.byId(idUser);
+        return ok(views.html.ajoutProduit.render(user, produitForm,request,messagesApi.preferred(request)) );
         
         
         
     }
     
-    public Result produitOk(Http.Request request){
+    public Result produitOk(Http.Request request, Long idUser  ){
         
+        
+         User user = User.find.byId(idUser);
         Form<Produit> lform = produitForm.bindFromRequest(request);
         if (lform.hasErrors()){
             
-            return badRequest(views.html.ajoutProduit.render(lform , request,messagesApi.preferred(request)));
+            return badRequest(views.html.ajoutProduit.render(user, lform ,   request,messagesApi.preferred(request)));
             
         }
         
         
         else{
+        
         Produit produit = lform.get();
+            user.add(produit);
             produit.save();
-        return redirect(routes.HomeController.listeProduit());
+        return redirect(routes.HomeControllerUser.rechercheUser(idUser));
         }
     }
     
@@ -101,7 +106,7 @@ public class HomeController extends Controller {
         Form<Produit> lform = produitForm.bindFromRequest(request);
         if (lform.hasErrors()){
             
-            return badRequest(views.html.ajoutProduit.render(lform , request,messagesApi.preferred(request)));
+            return badRequest(views.html.majProduit.render(lform , id, request,messagesApi.preferred(request)));
             
         }
         
@@ -111,7 +116,7 @@ public class HomeController extends Controller {
         produit.setid(id);
         produit.update();
             produit.save();
-        return redirect(routes.HomeController.listeProduit());
+        return redirect(routes.HomeControllerUser.rechercheUser(id));
         }
     } 
     

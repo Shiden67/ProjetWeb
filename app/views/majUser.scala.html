@@ -1,8 +1,8 @@
-@(lform : Form[User], id : Long)(implicit request : play.mvc.Http.Request, messages : play.i18n.Messages)
+@(lform : Form[User], idUser : Long)(implicit request : play.mvc.Http.Request, messages : play.i18n.Messages)
 
 @main("Ajout des User"){
 
-@helper.form(action = routes.HomeControllerUser.majUserOk(id)){
+@helper.form(action = routes.HomeControllerUser.majUserOk(idUser)){
 
 
 @helper.CSRF.formField

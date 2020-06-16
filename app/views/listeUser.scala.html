@@ -1,7 +1,10 @@
 @(liste : List[User])
 
 @main("liste des Produits"){
+
+
 <a href="@routes.HomeControllerUser.ajoutUser"> ajouter un User</a>
+
 <ol> 
     @for(p<-liste){
                     <li> <a href = "@routes.HomeControllerUser.rechercheUser(p.getidUser())"> @p.getprenom @p.getnom  @p.getemail @p.getmdp </a>
