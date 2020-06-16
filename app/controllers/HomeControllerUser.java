@@ -108,11 +108,38 @@ public class HomeControllerUser extends Controller {
         User user = lform.get();
         user.setidUser(id);
         user.update();
-            user.save();
+        user.save();
         return redirect(routes.HomeControllerUser.rechercheUser(id));
         }
     } 
     
+    
+    
+    public Result login(){
+     
+        
+        
+   return ok(views.html.login.render(""));     
+        
+    }
+    
+    
+    public Result loginOk(String email , String mdp){
+        
+     List<User> liste = User.find.all();
+       for (int i=0 ; i<liste.size(); i++){
+           
+           if (liste.get(i).getemail().equalsIgnoreCase(email) && liste.get(i).getmdp().equals(mdp)){
+            return redirect(routes.HomeControllerUser.rechercheUser(liste.get(i).getidUser()));   
+       }
+       }
+       // else {
+            
+            
+           return ok(views.html.login.render("L'email et le mot de passe ne correspondent pas"));
+            
+        //}
+    }
   
     
 }

@@ -1,0 +1,11 @@
+@(msg : String)
+@main(" Login" ){
+@helper.form(action = routes.HomeControllerUser.loginOk()){
+<input type = "text" name ="email"/>
+<input type = "password" name="mdp"/>
+
+
+<input type = "submit" name="login">
+}
+<p>@msg</p>
+}

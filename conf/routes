@@ -26,7 +26,8 @@ POST     /majUserOk/:idUser             controllers.HomeControllerUser.majUserOk
 
 
 
-
+GET    /login                       controllers.HomeControllerUser.login
+GET   /loginOk                     controllers.HomeControllerUser.loginOk( email : String ?="" , mdp : String ?="")
 
 
 # Map static resources from the /public folder to the /assets URL path
