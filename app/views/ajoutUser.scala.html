@@ -1,6 +1,9 @@
+
+
 @(lform : Form[User])(implicit request : play.mvc.Http.Request, messages : play.i18n.Messages)
 
 @main("Ajout des User"){
+<p>
 
 @helper.form(action = routes.HomeControllerUser.userOk()){
 
@@ -15,6 +18,6 @@
 
 
 
-
+</p>
 
 }
