@@ -1,0 +1,46 @@
+@( listepasbon : List[Produit] , listeamanger : List[Produit],  user : User)
+
+@main(" User ok" ){
+
+
+
+
+
+<h4>A consomer  </h4>
+
+@for(a <- listeamanger){
+          @if(a.getUser.getidUser == user.getidUser){
+          <li>
+
+<a href ="@routes.HomeController.rechercheProduit(a.getid())">@a.getnomProduit()</a>
+
+
+
+</li>
+          
+          }
+       }
+
+
+
+
+<h3> Périmé</h3>
+
+@for(b <- listepasbon){
+          
+          @if(b.getUser.getidUser == user.getidUser){
+          
+          <li>
+
+<a href ="@routes.HomeController.rechercheProduit(b.getid())">@b.getnomProduit()</a>
+
+
+
+</li>
+          }
+          
+       }
+
+
+
+}

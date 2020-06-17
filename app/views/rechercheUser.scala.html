@@ -2,10 +2,22 @@
 
 @main(" User ok" ){
 
-<h1>  @user.getprenom</h1>
+<h1>  Bonjour @user.getprenom @user.getnom</h1>
 
-<h2> nombre de produit : @user.produit.size()</h2>
-<a href ="@routes.HomeController.ajoutProduit(user.getidUser)" > ajouter </a>
+<a href = "@routes.HomeControllerUser.majUser(user.getidUser)" > Mettre le produit à jour</a>
+
+
+
+<h2> Nombre de produit ajouté : @user.produit.size()</h2>
+<a href ="@routes.HomeController.ajoutProduit(user.getidUser)" > Ajouter un produit </a>
+
+<a href = "@routes.HomeControllerUser.amanger(user.getidUser())">Voir produit à consommer</a>
+
+<a href="/login"> Deconnection</a>
+
+
+
+<h4>Liste des produits</h4>
 @for(p <- user.produit){
           <li>
 
@@ -21,6 +33,6 @@
           
           }
 
-<a href="@routes.HomeControllerUser.supprimerUser(user.getidUser)"> Effacer ce produit</a>
-<a href = "@routes.HomeControllerUser.majUser(user.getidUser)" > Mettre le produit à jour</a>
+
+
 }

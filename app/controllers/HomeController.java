@@ -7,6 +7,8 @@ import javax.inject.Inject;
 import play.i18n.MessagesApi;
 import play.data.*;
 import models.User;
+import java.util.Date;
+
 /**
  * This controller contains an action to handle HTTP requests
  * to the application's home page.
@@ -36,6 +38,9 @@ public class HomeController extends Controller {
     }
     
     public Result acceuil() {
+        //Date test = new Date ();
+        //long date = test.getTime();
+        //Date date2 = new Date(2006 , 6 , 16);
         return ok(views.html.acceuil.render());
     }
     
@@ -64,7 +69,7 @@ public class HomeController extends Controller {
         Produit produit = lform.get();
             user.add(produit);
             produit.save();
-        return redirect(routes.HomeControllerUser.rechercheUser(idUser));
+        return redirect(routes.HomeControllerUser.rechercheUser(user.getidUser()));
         }
     }
     
@@ -88,7 +93,7 @@ public class HomeController extends Controller {
         Produit produit = Produit.find.byId(id);
         produit.delete();
         
-        return redirect (routes.HomeController.listeProduit());
+        return redirect (routes.HomeController.rechercheProduit(id));
         
     }
     
@@ -116,7 +121,7 @@ public class HomeController extends Controller {
         produit.setid(id);
         produit.update();
             produit.save();
-        return redirect(routes.HomeControllerUser.rechercheUser(id));
+                return redirect (routes.HomeController.rechercheProduit(id));
         }
     } 
     
