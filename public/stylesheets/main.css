@@ -1,12 +1,91 @@
 
-html {
+.main{
+    
+    box-sizing: border-box;
+    width: 85%;
+    margin: auto;
+    background-color: white;
+    margin-top: 10px;
+}
+
+.divlabel{
+    
+    padding: 5px;
+    
+    
+  
+    
+    
+}
+
+#divlabel1{
+    
+    margin-top: 5px;
+    
+    
+}
+.h6form{
+    
+    margin: 0px;
+    text-decoration: none;
+    font-size: 20px;
+    
+    
+}
+.h1log{
+    color: forestgreen;
+    border-top: solid;
+    border-bottom: solid;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+    
+    
+}
+
+.h1profil{
+    margin: 0px;
+    margin-left: 20px;
+    padding: 8px;
+    
+    
+    
+}
+
+
+.divform{
+    
+    margin-left: 25%;
+   /*padding: 10px;*/
+    
+    
+}
+
+.bodymain {
   background-color: lightgreen;
+    
+     padding:0px;
+    margin: 0px;
+    background-image: url(https://www.pflanzenversand24.de/wp-content/uploads/2017/12/efeu_hecke_hedera_helix_laub.jpg);
 }
 div.login{
     text-align: center;
     width: 500 px;
     margin: 200px;
     padding: 200 px;
+}
+
+
+.divliste{
+    margin-left: 30%;
+   margin-bottom: 50px;
+    background-color: white;
+    /*padding: 10%;*/
+    /*border-top-style: solid;*/
+    
+    
+    
 }
 input{
     border-color: green;
@@ -16,7 +95,7 @@ input{
 li{
     list-style-type: none;
 }
-h1{
+header{
     background-color: green;
     color: white;
     text-align: center;
@@ -31,20 +110,86 @@ nav{
     display: flex;
     flex-direction: row;  
     font-size: 130%;
-    border-top-style: groove;
-    border-bottom-style: groove;
+    border-style: groove;
+    
+    
+    
 }
-a{
+
+.anav{
+    
+    
     display: inline-block;
     box-sizing: border-box;
     width: 50%;
     text-align: center;
+    text-decoration: none;
+    color: black;
 
 }
-section{
+#modifprofil{
+    
+    
+    padding-bottom: 50px;
+    
+}
+#h1logprofil{
+    
+ border: none;
+    padding-top: 20px;
+    text-decoration: underline;
+    
+    
+}
+
+
+.secamanger{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+
+.articleamanger{
+    
+    
+    padding: 5px;
+    border-style: solid;
+    flex-basis: 50%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+
+.h4amanger{
+    
+    text-align: center;
+    
+}
+
+
+
+.anav:hover{
+    
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: red;
+    
+    
+}
+
+.liliste{
+    
+    padding: 5px;
+   list-style-type: square;
+    
+}
+.sec{
     margin-top: 2%;
     margin-left: 5%;
     margin-right: 5%:
+    
 }
 .article1{
     display: inline-table;
@@ -67,6 +212,7 @@ section{
     width: 90%;
     margin:10px;
     padding:10px;
+    box-shadow:  4px 4px;
   
 }
 img{
@@ -79,6 +225,22 @@ p{
 }
 h2{
     text-align: center;
+   
+    margin-right: 25%;
+    margin-left: 25%;
+   
+}
+.h2user{
+    
+    
+     border-style: double;
+}
+h4{
+    
+    font-size: 120%;
+    
+    
+    
 }
 ul.experience{
 	text-align: justify;
