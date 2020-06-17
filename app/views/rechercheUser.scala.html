@@ -1,15 +1,29 @@
 @(user : User)
 
-@main(" User ok" ){
+@main("Profil" ){
 
-<h1>  @user.getprenom</h1>
+<h1 class = "h1profil">  Bonjour @user.getprenom @user.getnom</h1>
+<nav >
+<a href = "@routes.HomeControllerUser.majUser(user.getidUser)" class="anav" > Mettre le produit à jour</a>
+<a href ="@routes.HomeController.ajoutProduit(user.getidUser)" class="anav"> Ajouter un produit </a>
 
-<h2> nombre de produit : @user.produit.size()</h2>
-<a href ="@routes.HomeController.ajoutProduit(user.getidUser)" > ajouter </a>
+<a href = "@routes.HomeControllerUser.amanger(user.getidUser())" class="anav">Voir produit à consommer</a>
+
+<a href="/login" class="anav"> Deconnexion</a>
+
+</nav>
+
+<h2 class="h2user"> Nombre de produits dans la liste : @user.produit.size()</h2>
+
+
+
+
+<article class ="divliste">
+<h4>Liste des produits:</h4>
 @for(p <- user.produit){
-          <li>
+          <li class="liliste">
 
-<a href ="@routes.HomeController.rechercheProduit(p.getid())">@p.getnomProduit() </a>
+<a href ="@routes.HomeController.rechercheProduit(p.getid())" class="aliste"> Produit num @p.getid() : @p.getnomProduit() </a>
 
 
 
@@ -21,6 +35,6 @@
           
           }
 
-<a href="@routes.HomeControllerUser.supprimerUser(user.getidUser)"> Effacer ce produit</a>
-<a href = "@routes.HomeControllerUser.majUser(user.getidUser)" > Mettre le produit à jour</a>
+</article>
+
 }

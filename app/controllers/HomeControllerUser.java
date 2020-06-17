@@ -58,7 +58,7 @@ public class HomeControllerUser extends Controller {
         else{
         User user = lform.get();
              user.save();
-        return redirect(routes.HomeControllerUser.listeUser());
+        return redirect(routes.HomeController.acceuil());
         }
     }
     

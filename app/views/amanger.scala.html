@@ -1,16 +1,17 @@
 @( listepasbon : List[Produit] , listeamanger : List[Produit],  user : User)
 
 @main(" User ok" ){
+<h1 class="h1log" id="h1logprofil"> Produits à manger: </h1>
+<section class="secamanger" >
+
+    <article class = "articleamanger">
 
 
-
-
-
-<h4>A consomer  </h4>
+<h4 class="h4amanger">A consomer avant 4 jours ou moins </h4>
 
 @for(a <- listeamanger){
           @if(a.getUser.getidUser == user.getidUser){
-          <li>
+          <li class="liliste">
 
 <a href ="@routes.HomeController.rechercheProduit(a.getid())">@a.getnomProduit()</a>
 
@@ -21,16 +22,16 @@
           }
        }
 
+</article>
 
-
-
-<h3> Périmé</h3>
+<article class = "articleamanger">
+<h4 class="h4amanger"> Périmé :</h4>
 
 @for(b <- listepasbon){
           
           @if(b.getUser.getidUser == user.getidUser){
           
-          <li>
+          <li class="liliste">
 
 <a href ="@routes.HomeController.rechercheProduit(b.getid())">@b.getnomProduit()</a>
 
@@ -40,7 +41,8 @@
           }
           
        }
+</article>
 
-
-
+</section class="secamanger">
+<a href="/rechercheUser/@user.getidUser()">retour</a>
 }

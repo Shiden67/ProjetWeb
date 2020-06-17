@@ -90,10 +90,14 @@ public class HomeController extends Controller {
     }
     
     public Result supprimerProduit(Long id){
+         
         Produit produit = Produit.find.byId(id);
         produit.delete();
         
-        return redirect (routes.HomeController.rechercheProduit(id));
+     
+             return redirect (routes.HomeController.rechercheProduit(id-1));
+            
+       
         
     }
     

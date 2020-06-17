@@ -3,15 +3,17 @@
 @main("Ajout des Produits"){
 
 
-<h1> Ajout produit dans @user.getprenom()</h1>
+<h1 class="h1log" id="h1logprofil"> Ajouter un produit dans votre liste de produits</h1>
+
+<div class = "divform" id="modifprofil">
 @helper.form(action = routes.HomeController.produitOk(user.getidUser())){
 
 @helper.CSRF.formField
-@helper.inputText(lform("nomProduit") , '_showConstraints -> false , '_label -> "Nom du produit")
-@helper.select( field = lform("Famille du Produit") , options = Seq ("Viande" -> "Viande" , "Legume" -> "Légume"), '_showConstraints -> false)
-@helper.inputText(lform("Type du Produit"), '_showConstraints -> false)
-@helper.inputDate(lform("Date de peremption"), '_showConstraints -> false)
-@helper.input(lform("Nombre des Produits"), '_showConstraints -> false) { (id , name , value , args) =>
+@helper.inputText(lform("nomProduit") , '_showConstraints -> false , '_label -> "Nom du Produit")
+@helper.select( field = lform("familleProduit") , options = Seq ("Viande" -> "Viande" , "Legume" -> "Légume", "Fruit" -> "Fruit", "Boisson" -> "Boisson" , "Poisson" -> "Poisson", "oeuf" -> "oeuf" , "autre" -> "autre"), '_showConstraints -> false, '_label -> "Famille du produit")
+@helper.inputText(lform("typeProduit"), '_showConstraints -> false, '_label -> "Type du produit (exemple : jambon)")
+@helper.inputDate(lform("datePeremption"), '_showConstraints -> false, '_label -> "Date de péremption")
+@helper.input(lform("nmbProduit"), '_showConstraints -> false, '_label -> "Nombre de produits") { (id , name , value , args) =>
 <input type = "number" name = "@name" id = "@id" @toHtmlArgs(args)>
 
 
@@ -19,8 +21,9 @@
 
 }
 
-<input type = "submit"  value = "Enregistrer"/>
+<input type = "submit"  value = "Enregistrer"/> <a href="/rechercheUser/@user.getidUser()">retour</a>
 
 
 }
+</div>
 }

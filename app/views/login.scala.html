@@ -1,17 +1,30 @@
 @(msg : String)
 @main(" Login" ){
+<nav> 
+        <a href="/" style="text-decoration:none" class="anav">Acceuil</a> 
+        <a href="/ajoutUser" style="text-decoration:none" class="anav">Inscription</a> 
+        <a href="/login" style="text-decoration:none" class="anav">Connexion</a>
+</nav>
+    
+<h1 class="h1log"> Connexion </h1>
+
+<div class = "divform">
 @helper.form(action = routes.HomeControllerUser.loginOk()){
 
-<div class="login">
-<p><li>Adresse email:</li>
-<input type = "text" name ="email"/></p>
-    <p><li>Mot de passe:</li>
-<p><input type = "password" name="mdp"/>
-</p>
-
-<p><input type = "submit" name="login"></p>
-}
-<p>@msg</p>
+<div class="divlabel">
+ <h6 class= "h6form"> Email:</h6> 
+    <br/>
+<input type = "text" name ="email"/>
+    </div>
+<div class="divlabel">
+<h6 class= "h6form"> Mot de passe:</h6>   
+<input type = "password" name="mdp"/>
 </div>
-   
+<div class="divlabel " id="divlabel1">
+<input type = "submit" name="Se connecter">
+</div>
+}
+    
+<p>@msg</p>
+    </div>
 }

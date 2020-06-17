@@ -1,15 +1,15 @@
-2020-06-17 08:39:51 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 08:39:51 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 08:39:53 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 09:28:19 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 09:28:19 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 09:28:21 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-06-17 08:39:53 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 08:39:53 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+2020-06-17 09:28:21 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 09:28:21 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
 
-! @7g6im9agb - Internal server error, for (GET) [/] ->
+! @7g6j2imbf - Internal server error, for (GET) [/] ->
  
 play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
 	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$5(ApplicationEvolutions.scala:523)
@@ -51,65 +51,93 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-2020-06-17 08:39:53 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
-
-! @7g6im9ago - Internal server error, for (GET) [/] ->
- 
-play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
-	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$5(ApplicationEvolutions.scala:523)
-	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$5$adapted(ApplicationEvolutions.scala:516)
-	at play.api.db.evolutions.ApplicationEvolutions$.$anonfun$runEvolutions$1(ApplicationEvolutions.scala:208)
-	at play.api.db.evolutions.ApplicationEvolutions$.withLock(ApplicationEvolutions.scala:229)
-	at play.api.db.evolutions.ApplicationEvolutions$.runEvolutions(ApplicationEvolutions.scala:199)
-	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$4(ApplicationEvolutions.scala:516)
-	at play.api.db.evolutions.EvolutionsWebCommands.$anonfun$handleWebCommand$4$adapted(ApplicationEvolutions.scala:511)
-	at scala.collection.immutable.List.foreach(List.scala:305)
-	at play.api.db.evolutions.EvolutionsWebCommands.handleWebCommand(ApplicationEvolutions.scala:511)
-	at play.core.DefaultWebCommands.$anonfun$handleWebCommand$1(WebCommands.scala:42)
-	at scala.collection.immutable.Stream.flatMap(Stream.scala:202)
-	at play.core.DefaultWebCommands.handleWebCommand(WebCommands.scala:42)
-	at play.api.http.DefaultHttpRequestHandler.$anonfun$handlerForRequest$4(HttpRequestHandler.scala:200)
-	at scala.Option.flatMap(Option.scala:283)
-	at play.api.http.DefaultHttpRequestHandler.handlerForRequest(HttpRequestHandler.scala:199)
-	at play.core.server.Server$.getHandlerFor(Server.scala:126)
-	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:315)
-	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:190)
-	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1289)
-	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:541)
-	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:423)
-	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:624)
-	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:501)
-	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:599)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:768)
-	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:783)
-	at akka.actor.Actor.aroundReceive(Actor.scala:534)
-	at akka.actor.Actor.aroundReceive$(Actor.scala:532)
-	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:690)
-	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:573)
-	at akka.actor.ActorCell.invoke(ActorCell.scala:543)
-	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:269)
-	at akka.dispatch.Mailbox.run(Mailbox.scala:230)
-	at akka.dispatch.Mailbox.exec(Mailbox.scala:242)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-2020-06-17 08:39:55 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 08:39:56 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 08:39:56 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 08:39:56 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 09:28:24 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 09:28:25 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 09:28:25 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 09:28:25 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-06-17 08:39:56 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 08:43:21 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+2020-06-17 09:28:25 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 09:41:41 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 09:41:42 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 09:41:42 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 09:41:42 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
-! @7g6iml7ab - Internal server error, for (GET) [/listeUser] ->
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 09:41:42 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 09:44:31 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 09:44:31 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 09:44:31 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 09:44:32 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 09:44:32 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 09:50:38 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 09:50:39 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 09:50:39 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 09:50:39 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 09:50:39 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 09:52:34 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 09:52:34 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 09:52:34 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 09:52:34 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 09:52:34 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 09:59:34 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 09:59:34 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 09:59:34 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 09:59:34 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 09:59:34 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 09:59:59 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:00:00 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:00:00 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:00:00 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:00:00 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:01:19 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:01:19 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:01:19 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:01:19 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:01:19 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:03:56 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6j7a9m2 - Internal server error, for (GET) [/listeUser] ->
  
-play.sbt.PlayExceptions$CompilationException: Compilation error[not found: value p]
+play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
+  symbol:   method acceuil()
+  location: variable HomeControllerUser of type controllers.ReverseHomeControllerUser]
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
 	at scala.Option.map(Option.scala:230)
@@ -150,62 +178,351 @@ play.sbt.PlayExceptions$CompilationException: Compilation error[not found: value
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-2020-06-17 08:44:29 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 08:44:29 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 08:44:29 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 08:44:29 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 10:04:37 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:04:37 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:04:37 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:04:37 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-06-17 08:44:29 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 08:45:49 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 08:45:49 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 08:45:49 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 08:45:49 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 10:04:37 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:07:19 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:07:19 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:07:19 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:07:20 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-06-17 08:45:49 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 08:49:28 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 08:49:28 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 08:49:28 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 08:49:28 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 10:07:20 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:08:04 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:08:04 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:08:04 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:08:04 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-06-17 08:49:28 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 08:49:37 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 08:49:37 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 08:49:37 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 08:49:37 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 10:08:04 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:08:37 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:08:37 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:08:37 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:08:37 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-06-17 08:49:37 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 08:51:33 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 08:51:34 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 08:51:34 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 08:51:34 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 10:08:37 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:19:58 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:19:58 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:19:58 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:19:59 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-06-17 08:51:34 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 08:51:46 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+2020-06-17 10:19:59 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:31:49 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:31:49 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:31:49 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:31:49 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
-! @7g6innpmh - Internal server error, for (GET) [/rechercheProduit/1] ->
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:31:49 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:37:06 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:37:06 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:37:06 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:37:06 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:37:06 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:38:50 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:38:50 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:38:50 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:38:50 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:38:50 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:40:43 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:40:43 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:40:43 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:40:43 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:40:43 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:49:33 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:49:33 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:49:33 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:49:33 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:49:33 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:50:09 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:50:09 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:50:09 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:50:09 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:50:09 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:50:37 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:50:37 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:50:37 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:50:37 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:50:37 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:50:44 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:50:44 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:50:44 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:50:44 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:50:44 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:51:17 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:51:17 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:51:17 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:51:17 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:51:17 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:51:54 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:51:54 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:51:54 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:51:55 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:51:55 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:53:04 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:53:04 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:53:04 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:53:04 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:53:04 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:53:23 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:53:23 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:53:23 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:53:24 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:53:24 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:53:57 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:53:57 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:53:57 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:53:57 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:53:57 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 10:57:13 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 10:57:13 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 10:57:13 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 10:57:14 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 10:57:14 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:02:03 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:02:04 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:02:04 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:02:04 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:02:04 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:02:28 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:02:28 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:02:28 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:02:28 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:02:28 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:04:14 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:04:15 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:04:15 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:04:15 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:04:15 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:07:28 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:07:29 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:07:29 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:07:29 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:07:29 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:07:40 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:07:41 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:07:41 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:07:41 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:07:41 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:09:33 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:09:33 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:09:33 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:09:33 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:09:33 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:12:06 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:12:06 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:12:06 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:12:06 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:12:06 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:41:51 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:41:52 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:41:52 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:41:52 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:41:52 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:42:14 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:42:14 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:42:14 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:42:14 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:42:14 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:42:23 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:42:23 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:42:23 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:42:23 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:42:23 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:43:06 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:43:06 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:43:06 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:43:06 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:43:06 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:43:34 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:43:35 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:43:35 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:43:35 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:43:35 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:43:49 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:43:49 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:43:49 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:43:50 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:43:50 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:48:27 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:48:27 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:48:27 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:48:27 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:48:27 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:49:35 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:49:36 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:49:36 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:49:36 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:49:36 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:53:24 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jlk0mh - Internal server error, for (GET) [/rechercheUser/3] ->
  
-play.sbt.PlayExceptions$CompilationException: Compilation error[value getyear is not a member of java.util.Date
-did you mean getYear or setYear?]
+play.sbt.PlayExceptions$CompilationException: Compilation error[value getidProduit is not a member of models.Produit]
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
 	at scala.Option.map(Option.scala:230)
@@ -246,42 +563,375 @@ did you mean getYear or setYear?]
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-2020-06-17 08:51:57 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 08:51:58 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 08:51:58 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 08:51:58 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 11:53:44 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:53:44 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:53:44 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:53:44 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-06-17 08:51:58 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 08:52:30 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 08:52:31 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 08:52:31 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 08:52:31 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 11:53:44 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:55:17 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
 
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2020-06-17 08:52:31 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 09:00:57 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 09:00:57 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 09:00:57 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 09:00:57 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
-
-    play.filters.csrf.CSRFFilter
-    play.filters.headers.SecurityHeadersFilter
-    play.filters.hosts.AllowedHostsFilter
-
-2020-06-17 09:00:57 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 09:02:07 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
-
-! @7g6ip78hj - Internal server error, for (GET) [/rechercheProduit/1] ->
+! @7g6jm0d2g - Internal server error, for (GET) [/rechercheProduit/2] ->
  
-play.sbt.PlayExceptions$CompilationException: Compilation error[value toLocalString is not a member of java.util.Date
-did you mean toLocaleString?]
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:335)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:253)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:424)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:420)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:453)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:47)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:47)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.NullPointerException: null
+	at views.html.rechercheProduit$.apply(rechercheProduit.template.scala:36)
+	at views.html.rechercheProduit$.render(rechercheProduit.template.scala:48)
+	at views.html.rechercheProduit.render(rechercheProduit.template.scala)
+	at controllers.HomeController.rechercheProduit(HomeController.java:86)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$12(Routes.scala:463)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:140)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:139)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:113)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:119)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:175)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:661)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at play.core.j.HttpExecutionContext.$anonfun$execute$1(HttpExecutionContext.scala:64)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:59)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:392)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:302)
+	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallbacks(Promise.scala:276)
+	at scala.concurrent.impl.Promise$DefaultPromise.map(Promise.scala:146)
+	at scala.concurrent.Future$.apply(Future.scala:661)
+	at play.core.j.JavaAction.apply(JavaAction.scala:176)
+	at play.api.mvc.Action.$anonfun$apply$4(Action.scala:82)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:168)
+	at scala.util.Try$.apply(Try.scala:210)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:168)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:199)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:415)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:447)
+	... 12 common frames omitted
+2020-06-17 11:55:41 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jm1mg1 - Internal server error, for (GET) [/rechercheProduit/1] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:335)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:253)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:424)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:420)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:453)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:47)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:47)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.NullPointerException: null
+	at views.html.rechercheProduit$.apply(rechercheProduit.template.scala:36)
+	at views.html.rechercheProduit$.render(rechercheProduit.template.scala:48)
+	at views.html.rechercheProduit.render(rechercheProduit.template.scala)
+	at controllers.HomeController.rechercheProduit(HomeController.java:86)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$12(Routes.scala:463)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:140)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:139)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:113)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:119)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:175)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:661)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at play.core.j.HttpExecutionContext.$anonfun$execute$1(HttpExecutionContext.scala:64)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:59)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:392)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:302)
+	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallbacks(Promise.scala:276)
+	at scala.concurrent.impl.Promise$DefaultPromise.map(Promise.scala:146)
+	at scala.concurrent.Future$.apply(Future.scala:661)
+	at play.core.j.JavaAction.apply(JavaAction.scala:176)
+	at play.api.mvc.Action.$anonfun$apply$4(Action.scala:82)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:168)
+	at scala.util.Try$.apply(Try.scala:210)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:168)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:199)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:415)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:447)
+	... 12 common frames omitted
+2020-06-17 11:56:07 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jm38ep - Internal server error, for (GET) [/rechercheProduit/1] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:335)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:253)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:424)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:420)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:453)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:47)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:47)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.NullPointerException: null
+	at views.html.rechercheProduit$.apply(rechercheProduit.template.scala:36)
+	at views.html.rechercheProduit$.render(rechercheProduit.template.scala:48)
+	at views.html.rechercheProduit.render(rechercheProduit.template.scala)
+	at controllers.HomeController.rechercheProduit(HomeController.java:86)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$12(Routes.scala:463)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:140)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:139)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:113)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:119)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:175)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:661)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at play.core.j.HttpExecutionContext.$anonfun$execute$1(HttpExecutionContext.scala:64)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:59)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:392)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:302)
+	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallbacks(Promise.scala:276)
+	at scala.concurrent.impl.Promise$DefaultPromise.map(Promise.scala:146)
+	at scala.concurrent.Future$.apply(Future.scala:661)
+	at play.core.j.JavaAction.apply(JavaAction.scala:176)
+	at play.api.mvc.Action.$anonfun$apply$4(Action.scala:82)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:168)
+	at scala.util.Try$.apply(Try.scala:210)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:168)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:199)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:415)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:447)
+	... 12 common frames omitted
+2020-06-17 11:56:10 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jm3d5g - Internal server error, for (GET) [/rechercheProduit/2] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:335)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:253)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:424)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:420)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:453)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:47)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:47)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.NullPointerException: null
+	at views.html.rechercheProduit$.apply(rechercheProduit.template.scala:36)
+	at views.html.rechercheProduit$.render(rechercheProduit.template.scala:48)
+	at views.html.rechercheProduit.render(rechercheProduit.template.scala)
+	at controllers.HomeController.rechercheProduit(HomeController.java:86)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$12(Routes.scala:463)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:140)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:139)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:113)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:119)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:175)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:661)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at play.core.j.HttpExecutionContext.$anonfun$execute$1(HttpExecutionContext.scala:64)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:59)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:392)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:302)
+	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallbacks(Promise.scala:276)
+	at scala.concurrent.impl.Promise$DefaultPromise.map(Promise.scala:146)
+	at scala.concurrent.Future$.apply(Future.scala:661)
+	at play.core.j.JavaAction.apply(JavaAction.scala:176)
+	at play.api.mvc.Action.$anonfun$apply$4(Action.scala:82)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:168)
+	at scala.util.Try$.apply(Try.scala:210)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:168)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:199)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:415)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:447)
+	... 12 common frames omitted
+2020-06-17 11:57:03 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jm6chj - Internal server error, for (GET) [/rechercheProduit/3] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:335)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:253)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:424)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:420)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:453)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:47)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:47)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.NullPointerException: null
+	at views.html.rechercheProduit$.apply(rechercheProduit.template.scala:36)
+	at views.html.rechercheProduit$.render(rechercheProduit.template.scala:48)
+	at views.html.rechercheProduit.render(rechercheProduit.template.scala)
+	at controllers.HomeController.rechercheProduit(HomeController.java:86)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$12(Routes.scala:463)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:140)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:139)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:113)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:119)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:175)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:661)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at play.core.j.HttpExecutionContext.$anonfun$execute$1(HttpExecutionContext.scala:64)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:59)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:392)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:302)
+	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallbacks(Promise.scala:276)
+	at scala.concurrent.impl.Promise$DefaultPromise.map(Promise.scala:146)
+	at scala.concurrent.Future$.apply(Future.scala:661)
+	at play.core.j.JavaAction.apply(JavaAction.scala:176)
+	at play.api.mvc.Action.$anonfun$apply$4(Action.scala:82)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:168)
+	at scala.util.Try$.apply(Try.scala:210)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:168)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:199)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:415)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:447)
+	... 12 common frames omitted
+2020-06-17 11:57:43 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 11:57:43 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 11:57:43 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 11:57:43 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 11:57:43 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 11:57:43 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jm8k8g - Internal server error, for (GET) [/rechercheProduit/3] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:335)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:253)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:424)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:420)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:453)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:47)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:47)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.NullPointerException: null
+	at views.html.rechercheProduit$.apply(rechercheProduit.template.scala:38)
+	at views.html.rechercheProduit$.render(rechercheProduit.template.scala:47)
+	at views.html.rechercheProduit.render(rechercheProduit.template.scala)
+	at controllers.HomeController.rechercheProduit(HomeController.java:86)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$12(Routes.scala:463)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:140)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:139)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:113)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:119)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:175)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:661)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at play.core.j.HttpExecutionContext.$anonfun$execute$1(HttpExecutionContext.scala:64)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:59)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:392)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:302)
+	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallbacks(Promise.scala:276)
+	at scala.concurrent.impl.Promise$DefaultPromise.map(Promise.scala:146)
+	at scala.concurrent.Future$.apply(Future.scala:661)
+	at play.core.j.JavaAction.apply(JavaAction.scala:176)
+	at play.api.mvc.Action.$anonfun$apply$4(Action.scala:82)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:168)
+	at scala.util.Try$.apply(Try.scala:210)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:168)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:199)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:415)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:447)
+	... 12 common frames omitted
+2020-06-17 12:00:32 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jmi9np - Internal server error, for (GET) [/rechercheProduit/3] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
+  symbol:   variable getUser
+  location: variable produit of type models.Produit]
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
 	at scala.Option.map(Option.scala:230)
@@ -322,11 +972,11 @@ did you mean toLocaleString?]
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-2020-06-17 09:05:43 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+2020-06-17 12:01:32 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
 
-! @7g6ipjgi0 - Internal server error, for (GET) [/rechercheProduit/1] ->
+! @7g6jmlkab - Internal server error, for (GET) [/rechercheProduit/3] ->
  
-play.sbt.PlayExceptions$CompilationException: Compilation error[value getDateTimeInstance is not a member of java.util.Date]
+play.sbt.PlayExceptions$CompilationException: Compilation error[`}` expected but eof found.]
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
 	at scala.Option.map(Option.scala:230)
@@ -367,11 +1017,261 @@ play.sbt.PlayExceptions$CompilationException: Compilation error[value getDateTim
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-2020-06-17 09:06:02 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+2020-06-17 12:01:43 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 12:01:44 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 12:01:44 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 12:01:44 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
-! @7g6ipkijn - Internal server error, for (GET) [/rechercheProduit/1] ->
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 12:01:44 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 12:01:44 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jmmcaa - Internal server error, for (GET) [/rechercheProduit/3] ->
  
-play.sbt.PlayExceptions$CompilationException: Compilation error[value getDateTimeInstance is not a member of java.util.Date]
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:335)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:253)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:424)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:420)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:453)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:47)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:47)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.NullPointerException: null
+	at views.html.rechercheProduit$.apply(rechercheProduit.template.scala:36)
+	at views.html.rechercheProduit$.render(rechercheProduit.template.scala:48)
+	at views.html.rechercheProduit.render(rechercheProduit.template.scala)
+	at controllers.HomeController.rechercheProduit(HomeController.java:86)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$12(Routes.scala:463)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:140)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:139)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:113)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:119)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:175)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:661)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at play.core.j.HttpExecutionContext.$anonfun$execute$1(HttpExecutionContext.scala:64)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:59)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:392)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:302)
+	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallbacks(Promise.scala:276)
+	at scala.concurrent.impl.Promise$DefaultPromise.map(Promise.scala:146)
+	at scala.concurrent.Future$.apply(Future.scala:661)
+	at play.core.j.JavaAction.apply(JavaAction.scala:176)
+	at play.api.mvc.Action.$anonfun$apply$4(Action.scala:82)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:168)
+	at scala.util.Try$.apply(Try.scala:210)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:168)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:199)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:415)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:447)
+	... 12 common frames omitted
+2020-06-17 12:01:49 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jmmkfn - Internal server error, for (GET) [/rechercheProduit/1] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:335)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:253)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:424)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:420)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:453)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:47)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:47)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.NullPointerException: null
+	at views.html.rechercheProduit$.apply(rechercheProduit.template.scala:36)
+	at views.html.rechercheProduit$.render(rechercheProduit.template.scala:48)
+	at views.html.rechercheProduit.render(rechercheProduit.template.scala)
+	at controllers.HomeController.rechercheProduit(HomeController.java:86)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$12(Routes.scala:463)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:140)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:139)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:113)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:119)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:175)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:661)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at play.core.j.HttpExecutionContext.$anonfun$execute$1(HttpExecutionContext.scala:64)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:59)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:392)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:302)
+	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallbacks(Promise.scala:276)
+	at scala.concurrent.impl.Promise$DefaultPromise.map(Promise.scala:146)
+	at scala.concurrent.Future$.apply(Future.scala:661)
+	at play.core.j.JavaAction.apply(JavaAction.scala:176)
+	at play.api.mvc.Action.$anonfun$apply$4(Action.scala:82)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:168)
+	at scala.util.Try$.apply(Try.scala:210)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:168)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:199)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:415)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:447)
+	... 12 common frames omitted
+2020-06-17 12:02:39 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jmpfnh - Internal server error, for (GET) [/rechercheProduit/3] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:335)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:253)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:424)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:420)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:453)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:47)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:47)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.NullPointerException: null
+	at views.html.rechercheProduit$.apply(rechercheProduit.template.scala:36)
+	at views.html.rechercheProduit$.render(rechercheProduit.template.scala:48)
+	at views.html.rechercheProduit.render(rechercheProduit.template.scala)
+	at controllers.HomeController.rechercheProduit(HomeController.java:86)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$12(Routes.scala:463)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:140)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:139)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:113)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:119)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:175)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:661)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at play.core.j.HttpExecutionContext.$anonfun$execute$1(HttpExecutionContext.scala:64)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:59)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:392)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:302)
+	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallbacks(Promise.scala:276)
+	at scala.concurrent.impl.Promise$DefaultPromise.map(Promise.scala:146)
+	at scala.concurrent.Future$.apply(Future.scala:661)
+	at play.core.j.JavaAction.apply(JavaAction.scala:176)
+	at play.api.mvc.Action.$anonfun$apply$4(Action.scala:82)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:168)
+	at scala.util.Try$.apply(Try.scala:210)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:168)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:199)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:415)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:447)
+	... 12 common frames omitted
+2020-06-17 12:04:57 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 12:04:57 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 12:04:57 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 12:04:57 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 12:04:57 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 12:05:40 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jn9nl8 - Internal server error, for (GET) [/rechercheProduit/5] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:335)
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:253)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:424)
+	at play.core.server.AkkaHttpServer$$anonfun$2.applyOrElse(AkkaHttpServer.scala:420)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:453)
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.$anonfun$run$1(BatchingExecutor.scala:92)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.scala:18)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:94)
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:92)
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:47)
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(ForkJoinExecutorConfigurator.scala:47)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+Caused by: java.lang.NullPointerException: null
+	at views.html.rechercheProduit$.apply(rechercheProduit.template.scala:36)
+	at views.html.rechercheProduit$.render(rechercheProduit.template.scala:48)
+	at views.html.rechercheProduit.render(rechercheProduit.template.scala)
+	at controllers.HomeController.rechercheProduit(HomeController.java:86)
+	at router.Routes$$anonfun$routes$1.$anonfun$applyOrElse$12(Routes.scala:463)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:140)
+	at play.core.routing.HandlerInvokerFactory$$anon$6.resultCall(HandlerInvoker.scala:139)
+	at play.core.routing.HandlerInvokerFactory$JavaActionInvokerFactory$$anon$3$$anon$4$$anon$5.invocation(HandlerInvoker.scala:113)
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:119)
+	at play.http.DefaultActionCreator$1.call(DefaultActionCreator.java:33)
+	at play.core.j.JavaAction.$anonfun$apply$8(JavaAction.scala:175)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:661)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:430)
+	at play.core.j.HttpExecutionContext.$anonfun$execute$1(HttpExecutionContext.scala:64)
+	at play.api.libs.streams.Execution$trampoline$.execute(Execution.scala:70)
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:59)
+	at scala.concurrent.impl.Promise$Transformation.submitWithValue(Promise.scala:392)
+	at scala.concurrent.impl.Promise$DefaultPromise.submitWithValue(Promise.scala:302)
+	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallbacks(Promise.scala:276)
+	at scala.concurrent.impl.Promise$DefaultPromise.map(Promise.scala:146)
+	at scala.concurrent.Future$.apply(Future.scala:661)
+	at play.core.j.JavaAction.apply(JavaAction.scala:176)
+	at play.api.mvc.Action.$anonfun$apply$4(Action.scala:82)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$4(Accumulator.scala:168)
+	at scala.util.Try$.apply(Try.scala:210)
+	at play.api.libs.streams.StrictAccumulator.$anonfun$mapFuture$3(Accumulator.scala:168)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at scala.Function1.$anonfun$andThen$1(Function1.scala:85)
+	at play.api.libs.streams.StrictAccumulator.run(Accumulator.scala:199)
+	at play.core.server.AkkaHttpServer.$anonfun$runAction$4(AkkaHttpServer.scala:415)
+	at akka.http.scaladsl.util.FastFuture$.strictTransform$1(FastFuture.scala:41)
+	at akka.http.scaladsl.util.FastFuture$.$anonfun$transformWith$3(FastFuture.scala:51)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:447)
+	... 12 common frames omitted
+2020-06-17 12:06:56 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jne6j5 - Internal server error, for (GET) [/rechercheUser/3] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
+  symbol:   method size()
+  location: variable produit of type models.Produit]
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
 	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
 	at scala.Option.map(Option.scala:230)
@@ -412,48 +1312,671 @@ play.sbt.PlayExceptions$CompilationException: Compilation error[value getDateTim
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
-2020-06-17 09:06:20 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 09:06:20 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 09:06:20 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 09:06:20 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 12:07:56 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jnhh00 - Internal server error, for (GET) [/rechercheUser/3] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
+  symbol:   variable produit
+  location: class controllers.HomeController]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:40)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:35)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:28)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:63)
+	at scala.util.Either$LeftProjection.map(Either.scala:573)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:63)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:78)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:496)
+	at play.runsupport.Reloader$$anon$1.run(Reloader.scala:57)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:63)
+	at play.runsupport.Reloader.reload(Reloader.scala:496)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:141)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:300)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:190)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1289)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:541)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:423)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:624)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:501)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:768)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:783)
+	at akka.actor.Actor.aroundReceive(Actor.scala:534)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:532)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:690)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:573)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:543)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:269)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:230)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:242)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+2020-06-17 12:08:24 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jnj6mk - Internal server error, for (GET) [/rechercheUser/3] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[package user does not exist]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:40)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:35)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:28)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:63)
+	at scala.util.Either$LeftProjection.map(Either.scala:573)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:63)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:78)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:496)
+	at play.runsupport.Reloader$$anon$1.run(Reloader.scala:57)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:63)
+	at play.runsupport.Reloader.reload(Reloader.scala:496)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:141)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:300)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:190)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1289)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:541)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:423)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:624)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:501)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:768)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:783)
+	at akka.actor.Actor.aroundReceive(Actor.scala:534)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:532)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:690)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:573)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:543)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:269)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:230)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:242)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+2020-06-17 12:08:33 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jnjkb9 - Internal server error, for (GET) [/rechercheUser/3] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
+  symbol:   variable user
+  location: class controllers.HomeController]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:40)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:35)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:28)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:63)
+	at scala.util.Either$LeftProjection.map(Either.scala:573)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:63)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:78)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:496)
+	at play.runsupport.Reloader$$anon$1.run(Reloader.scala:57)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:63)
+	at play.runsupport.Reloader.reload(Reloader.scala:496)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:141)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:300)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:190)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1289)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:541)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:423)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:624)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:501)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:768)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:783)
+	at akka.actor.Actor.aroundReceive(Actor.scala:534)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:532)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:690)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:573)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:543)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:269)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:230)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:242)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+2020-06-17 12:10:14 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jnpdk0 - Internal server error, for (GET) [/rechercheUser/3] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
+  symbol:   variable idUser
+  location: class controllers.HomeController]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:40)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:35)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:28)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:63)
+	at scala.util.Either$LeftProjection.map(Either.scala:573)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:63)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:78)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:496)
+	at play.runsupport.Reloader$$anon$1.run(Reloader.scala:57)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:63)
+	at play.runsupport.Reloader.reload(Reloader.scala:496)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:141)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:300)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:190)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1289)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:541)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:423)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:624)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:501)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:768)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:783)
+	at akka.actor.Actor.aroundReceive(Actor.scala:534)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:532)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:690)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:573)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:543)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:269)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:230)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:242)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+2020-06-17 12:14:32 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6joe4og - Internal server error, for (GET) [/rechercheUser/3] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[cannot find symbol
+  symbol:   method hasErrors()
+  location: variable produit of type models.Produit]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:40)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:35)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:28)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:63)
+	at scala.util.Either$LeftProjection.map(Either.scala:573)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:63)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:78)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:496)
+	at play.runsupport.Reloader$$anon$1.run(Reloader.scala:57)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:63)
+	at play.runsupport.Reloader.reload(Reloader.scala:496)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:141)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:300)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:190)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1289)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:541)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:423)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:624)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:501)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:768)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:783)
+	at akka.actor.Actor.aroundReceive(Actor.scala:534)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:532)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:690)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:573)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:543)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:269)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:230)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:242)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+2020-06-17 12:14:51 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6jof7cp - Internal server error, for (GET) [/rechercheUser/3] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[class, interface, or enum expected]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:40)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:35)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:28)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:63)
+	at scala.util.Either$LeftProjection.map(Either.scala:573)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:63)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:78)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:496)
+	at play.runsupport.Reloader$$anon$1.run(Reloader.scala:57)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:63)
+	at play.runsupport.Reloader.reload(Reloader.scala:496)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:141)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:300)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:190)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1289)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:541)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:423)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:624)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:501)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:768)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:783)
+	at akka.actor.Actor.aroundReceive(Actor.scala:534)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:532)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:690)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:573)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:543)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:269)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:230)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:242)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+2020-06-17 12:15:04 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 12:15:04 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 12:15:04 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 12:15:04 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-06-17 09:06:20 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 09:07:09 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 09:07:10 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 09:07:10 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 09:07:10 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 12:15:04 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 12:19:43 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 12:19:43 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 12:19:43 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 12:19:43 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-06-17 09:07:10 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 09:10:00 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 09:10:00 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 09:10:00 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 09:10:00 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 12:19:43 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 12:21:31 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 12:21:31 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 12:21:31 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 12:21:31 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-06-17 09:10:00 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 09:11:54 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 09:11:54 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
-2020-06-17 09:11:54 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
-2020-06-17 09:11:55 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+2020-06-17 12:21:31 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 12:26:08 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 12:26:09 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 12:26:09 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 12:26:09 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
 
     play.filters.csrf.CSRFFilter
     play.filters.headers.SecurityHeadersFilter
     play.filters.hosts.AllowedHostsFilter
 
-2020-06-17 09:11:55 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
-2020-06-17 09:12:15 [34mINFO [0;39m [36mp.a.i.l.c.CoordinatedShutdownSupport[0;39m [35m[0;39m Starting synchronous coordinated shutdown with ServerStoppedReason reason and 35000 milliseconds timeout
-2020-06-17 09:12:15 [34mINFO [0;39m [36mplay.core.server.AkkaHttpServer[0;39m [35m[0;39m Stopping Akka HTTP server...
-2020-06-17 09:12:15 [34mINFO [0;39m [36mplay.core.server.AkkaHttpServer[0;39m [35m[0;39m Terminating server binding for /0:0:0:0:0:0:0:0:9000
-2020-06-17 09:12:15 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
-2020-06-17 09:12:15 [34mINFO [0;39m [36mplay.core.server.AkkaHttpServer[0;39m [35m[0;39m Running provided shutdown stop hooks
+2020-06-17 12:26:09 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 12:26:47 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 12:26:47 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 12:26:47 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 12:26:47 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 12:26:47 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 12:28:46 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 12:28:46 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 12:28:46 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 12:28:46 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 12:28:46 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 12:40:07 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 12:40:07 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 12:40:07 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 12:40:07 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 12:40:07 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:06:06 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:06:07 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:06:07 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:06:07 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:06:07 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:06:51 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:06:51 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:06:51 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:06:51 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:06:51 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:09:44 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:09:44 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:09:44 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:09:44 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:09:44 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:10:21 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:10:21 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:10:21 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:10:21 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:10:21 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:10:29 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:10:29 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:10:29 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:10:29 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:10:29 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:10:56 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:10:56 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:10:56 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:10:56 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:10:56 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:11:28 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:11:28 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:11:28 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:11:28 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:11:28 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:12:20 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:12:21 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:12:21 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:12:21 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:12:21 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:14:13 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:14:13 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:14:13 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:14:13 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:14:13 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:15:48 [1;31mERROR[0;39m [36mp.api.http.DefaultHttpErrorHandler[0;39m [35m[0;39m 
+
+! @7g6k6f943 - Internal server error, for (GET) [/majUser/3] ->
+ 
+play.sbt.PlayExceptions$CompilationException: Compilation error[not found: value user]
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at play.sbt.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:34)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.$anonfun$taskFailureHandler$1(PlayReload.scala:40)
+	at scala.Option.map(Option.scala:230)
+	at play.sbt.run.PlayReload$.taskFailureHandler(PlayReload.scala:35)
+	at play.sbt.run.PlayReload$.compileFailure(PlayReload.scala:28)
+	at play.sbt.run.PlayReload$.$anonfun$compile$3(PlayReload.scala:63)
+	at scala.util.Either$LeftProjection.map(Either.scala:573)
+	at play.sbt.run.PlayReload$.compile(PlayReload.scala:63)
+	at play.sbt.run.PlayRun$.$anonfun$playRunTask$4(PlayRun.scala:78)
+	at play.runsupport.Reloader.$anonfun$reload$1(Reloader.scala:496)
+	at play.runsupport.Reloader$$anon$1.run(Reloader.scala:57)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at play.runsupport.Reloader$.play$runsupport$Reloader$$withReloaderContextClassLoader(Reloader.scala:63)
+	at play.runsupport.Reloader.reload(Reloader.scala:496)
+	at play.core.server.DevServerStart$$anon$1.get(DevServerStart.scala:141)
+	at play.core.server.AkkaHttpServer.handleRequest(AkkaHttpServer.scala:300)
+	at play.core.server.AkkaHttpServer.$anonfun$createServerBinding$1(AkkaHttpServer.scala:190)
+	at akka.stream.impl.fusing.MapAsync$$anon$30.onPush(Ops.scala:1289)
+	at akka.stream.impl.fusing.GraphInterpreter.processPush(GraphInterpreter.scala:541)
+	at akka.stream.impl.fusing.GraphInterpreter.execute(GraphInterpreter.scala:423)
+	at akka.stream.impl.fusing.GraphInterpreterShell.runBatch(ActorGraphInterpreter.scala:624)
+	at akka.stream.impl.fusing.GraphInterpreterShell$AsyncInput.execute(ActorGraphInterpreter.scala:501)
+	at akka.stream.impl.fusing.GraphInterpreterShell.processEvent(ActorGraphInterpreter.scala:599)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.akka$stream$impl$fusing$ActorGraphInterpreter$$processEvent(ActorGraphInterpreter.scala:768)
+	at akka.stream.impl.fusing.ActorGraphInterpreter$$anonfun$receive$1.applyOrElse(ActorGraphInterpreter.scala:783)
+	at akka.actor.Actor.aroundReceive(Actor.scala:534)
+	at akka.actor.Actor.aroundReceive$(Actor.scala:532)
+	at akka.stream.impl.fusing.ActorGraphInterpreter.aroundReceive(ActorGraphInterpreter.scala:690)
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:573)
+	at akka.actor.ActorCell.invoke(ActorCell.scala:543)
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:269)
+	at akka.dispatch.Mailbox.run(Mailbox.scala:230)
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:242)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1016)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:177)
+2020-06-17 13:16:05 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:16:06 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:16:06 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:16:06 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:16:06 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:17:23 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:17:23 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:17:23 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:17:23 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:17:23 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:17:44 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:17:44 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:17:44 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:17:44 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:17:44 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:20:16 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:20:16 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:20:16 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:20:16 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:20:16 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:20:54 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:20:54 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:20:54 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:20:54 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:20:54 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:22:26 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:22:26 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:22:26 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:22:26 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:22:26 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:24:51 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:24:51 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:24:51 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:24:51 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:24:51 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:25:16 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:25:17 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:25:17 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:25:17 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:25:17 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:26:24 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:26:25 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:26:25 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:26:25 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:26:25 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:29:33 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:29:33 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:29:33 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:29:33 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:29:33 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:31:24 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:31:24 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:31:24 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:31:24 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:31:24 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:33:15 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:33:15 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:33:15 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:33:15 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:33:15 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:36:56 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:36:56 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:36:56 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:36:56 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:36:56 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:38:05 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:38:05 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:38:05 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:38:05 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:38:05 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:42:50 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:42:51 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:42:51 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:42:51 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:42:51 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:43:41 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:43:41 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:43:41 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:43:41 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:43:41 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:44:25 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:44:25 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:44:25 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:44:25 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:44:25 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:46:32 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:46:32 [34mINFO [0;39m [36mplay.api.db.DefaultDBApi[0;39m [35m[0;39m Database [default] initialized at jdbc:h2:mem:play;DB_CLOSE_DELAY=-1
+2020-06-17 13:46:32 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Creating Pool for datasource 'default'
+2020-06-17 13:46:32 [34mINFO [0;39m [36mplay.api.http.EnabledFilters[0;39m [35m[0;39m Enabled Filters (see <https://www.playframework.com/documentation/latest/Filters>):
+
+    play.filters.csrf.CSRFFilter
+    play.filters.headers.SecurityHeadersFilter
+    play.filters.hosts.AllowedHostsFilter
+
+2020-06-17 13:46:32 [34mINFO [0;39m [36mplay.api.Play[0;39m [35m[0;39m Application started (Dev) (no global state)
+2020-06-17 13:47:54 [34mINFO [0;39m [36mp.a.i.l.c.CoordinatedShutdownSupport[0;39m [35m[0;39m Starting synchronous coordinated shutdown with ServerStoppedReason reason and 35000 milliseconds timeout
+2020-06-17 13:47:54 [34mINFO [0;39m [36mplay.core.server.AkkaHttpServer[0;39m [35m[0;39m Stopping Akka HTTP server...
+2020-06-17 13:47:54 [34mINFO [0;39m [36mplay.core.server.AkkaHttpServer[0;39m [35m[0;39m Terminating server binding for /0:0:0:0:0:0:0:0:9000
+2020-06-17 13:47:55 [34mINFO [0;39m [36mplay.api.db.HikariCPConnectionPool[0;39m [35m[0;39m Shutting down connection pool.
+2020-06-17 13:47:55 [34mINFO [0;39m [36mplay.core.server.AkkaHttpServer[0;39m [35m[0;39m Running provided shutdown stop hooks
